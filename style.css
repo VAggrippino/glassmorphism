@@ -1,49 +1,53 @@
 :root {
-  --mainWidth: 30rem;
-  --mainHeight: 28rem;
-  --logoSize: 200px;
+    --mainWidth: 30rem;
+    --mainHeight: 28rem;
+    --logoSize: 200px;
 }
 
 * { box-sizing: border-box; }
-html, body { height: 100% }
-body {
-  display: grid;
-  place-items: center;
+
+html, body {
+    height: 100%
 }
 
 body {
-  background-color: lightblue;
+    display: grid;
+    place-items: center;
+}
+
+body {
+    background-color: lightblue;
 }
 
 main {
-  position: relative;
-  background-color: #fffa;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  width: var(--mainWidth);
-  height: var(--mainHeight);
-  padding: 1rem 2rem;
-  border-radius: 1rem;
+    position: relative;
+    background-color: #fffa;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: var(--mainWidth);
+    height: var(--mainHeight);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
 }
 
 .logo {
-  height: var(--logoSize);
-  width: var(--logoSize);
-  
-  position: absolute;
-  left: calc(50% - var(--mainWidth) / 2 - var(--logoSize) / 2);
-  top: calc(50% - var(--mainHeight) / 2 - var(--logoSize) / 2);
-  
-  display: grid;
-  place-items: center;
-  
-  /* animation-name: bounce; */
-  animation-name: rotate;
-  animation-direction: normal;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transform-origin: 55% 50%;
+    height: var(--logoSize);
+    width: var(--logoSize);
+
+    position: absolute;
+    left: calc(50% - var(--mainWidth) / 2 - var(--logoSize) / 2);
+    top: calc(50% - var(--mainHeight) / 2 - var(--logoSize) / 2);
+
+    display: grid;
+    place-items: center;
+
+    /* animation-name: bounce; */
+    animation-name: rotate;
+    animation-direction: normal;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: 55% 50%;
 }
 
 /*
@@ -71,39 +75,40 @@ main {
 */
 
 .logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 @keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
+
 @keyframes bounce {
-  0% {
-    top: 0;
-    left: calc(50% - var(--logoSize) / 2);
-  }
-  
-  25% {
-    top: calc(50% - var(--logoSize) / 2);
-    left: calc(100% - var(--logoSize));
-  }
-  
-  50% {
-    top: calc(100% - var(--logoSize));
-    left: calc(50% - var(--logoSize) / 2);
-  }
-  
-  75% {
-    top: calc(50% - var(--logoSize) / 2);
-    left: 0;
-  }
-  
-  100% {
-    top: 0;
-    left: calc(50% - var(--logoSize) / 2);
-  }
+    0% {
+        top: 0;
+        left: calc(50% - var(--logoSize) / 2);
+    }
+
+    25% {
+        top: calc(50% - var(--logoSize) / 2);
+        left: calc(100% - var(--logoSize));
+    }
+
+    50% {
+        top: calc(100% - var(--logoSize));
+        left: calc(50% - var(--logoSize) / 2);
+    }
+
+    75% {
+        top: calc(50% - var(--logoSize) / 2);
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        left: calc(50% - var(--logoSize) / 2);
+    }
 }
